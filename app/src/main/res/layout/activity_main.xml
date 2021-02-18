@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cebula2"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/lists"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="24dp"
+        android:onClick="goToShoppingList"
         android:text="LISTA ZAKUPÓW"
         app:layout_constraintBottom_toTopOf="@+id/calculator"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,9 +20,10 @@
 
     <Button
         android:id="@+id/calculator"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="24dp"
+        android:onClick="goToCalculator"
         android:text="KALKULATOR DLA CEBULAKÓW"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,9 +32,10 @@
 
     <Button
         android:id="@+id/credits"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="24dp"
+        android:onClick="goToInfo"
         android:text="INFO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
