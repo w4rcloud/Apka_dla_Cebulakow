@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="425dp"
-        android:onClick="calculate"
+        android:onClick="calculate2"
         android:text="OBLICZ CENĘ ZA 100 JEDNOSTEK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -20,11 +20,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/price3"
+        android:id="@+id/price2"
         android:layout_width="186dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
+        android:allowUndo="false"
         android:background="@android:color/background_dark"
         android:ems="10"
         android:hint="Cena"
@@ -35,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <EditText
-        android:id="@+id/amount3"
+        android:id="@+id/amount2"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -70,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <EditText
-        android:id="@+id/price2"
+        android:id="@+id/price3"
         android:layout_width="186dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -85,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/result2" />
 
     <EditText
-        android:id="@+id/amount2"
+        android:id="@+id/amount3"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -172,6 +173,7 @@
         android:background="@android:color/background_dark"
         android:ems="10"
         android:inputType="textPersonName"
+        android:onClick="calculate2"
         android:textColor="#FFFFFF"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
