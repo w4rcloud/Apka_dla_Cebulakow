@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -12,6 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class CalculatorActivity extends AppCompatActivity {
     boolean dolanOn = false;
@@ -27,7 +32,16 @@ public class CalculatorActivity extends AppCompatActivity {
         double amount = Double.parseDouble(((TextView) findViewById(R.id.amount)).getText().toString());
         if (amount == 0 && !dolanOn) {
             findViewById(R.id.dolan).setVisibility(View.VISIBLE);
+            findViewById(R.id.button).setVisibility(View.INVISIBLE);
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    findViewById(R.id.dolan).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button).setVisibility(View.VISIBLE);
+                }
+            }, 2000);
         }
+
         EditText t = findViewById(R.id.amount);
         String input = t.getText().toString();
         Log.d("result", ((TextView) findViewById(R.id.result)).getText().toString());
