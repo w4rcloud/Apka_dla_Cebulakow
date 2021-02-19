@@ -1,19 +1,13 @@
 package com.example.apkadlacebulakw;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -52,7 +46,7 @@ public class CalculatorActivity extends AppCompatActivity {
         Log.d("amount", String.valueOf(amount));
         Log.d("price / amount", String.valueOf(price / amount));
         Toast.makeText(this, String.valueOf(price / amount), Toast.LENGTH_LONG).show();
-        ((TextView) findViewById(R.id.result)).setText(String.valueOf(price / amount));
+        ((TextView) findViewById(R.id.result)).setText("Cena za 1 jednostkę (szt, ml, g, itp.) = " + String.valueOf(price / amount));
     }
 
     public void calculate2() {
